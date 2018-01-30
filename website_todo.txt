@@ -1,0 +1,15 @@
+10:19 04.05.2017
+-Email/Kontakt & about & HOME auf jeder Projektseite (sonst weiß man nicht wo man ist wenn man extern verlinkt wird)
+
+12:14 26.04.2017
+-aufbau index auf smartphone?
+-responsive Erdscheibe, gallery
+
+
+14:16 25.04.2017
+-Seitendesign: background, paint-biolder?, ..
+-mouseover project: h1 --> project title. description in other div?
+-Inhalte: Erdscheibe, Andorra I & II, Fotos
+-font-size scaling: 1.75vw, minimum fonz-size?
+-buttons: style/text
+-background-image: scans aus notizbüchern

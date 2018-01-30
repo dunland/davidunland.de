@@ -1,0 +1,48 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Lora, georgia, serif;
+    font-size:16px;
+}
+
+h1 {
+    display: inline;
+}
+
+div.head {
+    /*header area on top with responsive height*/
+    position: static;
+    z-index: 10;
+    top: 0px;
+    height: 10vw;
+    max-height: 120px;
+    width: 100%;
+    /*background-color:red*/
+    /*border:dotted;*/
+}
+
+div.head h1 {
+  display: inline;
+  font-style: justify;
+color: rgb(76, 185, 185);
+font-size: 5vw;
+letter-spacing: 3vw;
+}
+
+div.container {
+    position: static;
+    /*background-color: lightblue;*/
+    margin: auto;
+    /*margin:auto and max-width will put the container into the middle of the screen*/
+    max-width: 80%;
+    /*margin:auto and max-width will put the container into the middle of the screen*/
+    height: 100%;
+    width: 100%;
+}
+
+
+.container img{
+  margin:25px;
+  width:90%;
+  max-width:900px;
+}

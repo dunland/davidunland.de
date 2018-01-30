@@ -1,0 +1,105 @@
+html, body {
+  /* margin: 0px;
+  padding: 0px; */
+  font-family: Lora, georgia, serif;
+  font-size: 16px;
+}
+
+/* For website headers */
+h1 {
+  display: inline;
+  font-style: justify;
+  color: rgb(76, 185, 185);
+  font-size: 5vw;
+  letter-spacing: 3vw;
+}
+
+/* For website subheaders */
+h2 {
+  display: inline;
+  font-style: justify;
+  color: rgba(139, 185, 185, 0.81);
+  letter-spacing: 2vw;
+  font-size: 3vw;
+}
+
+/* div {
+  border: solid;
+  border-color: black;
+} */
+
+div.head {
+  /*header area on top with responsive height*/
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  height: 10vw;
+  max-height: 120px;
+  width: 100%;
+  border-color: green;
+  /*background-color:red*/
+  /*border:dotted;*/
+}
+
+
+/* .clearfix::after{
+  content:"";
+  clear:both;
+  display:table;
+  overflow:auto;
+} */
+
+div.col-sm-4 {
+  /* overflow: auto; */
+  /* display:inline-block; */
+  border-color: red;
+  /* float: none; */
+  /* margin: 0 auto; */
+  /* margin:0px; */
+  padding: 0px;
+  /* height:300px; */
+  /*width and height of the column scale from 300px to 200px*/
+}
+
+div.col-sm-4 img {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  max-width: 300px;
+  /* width: 30vw; */
+  /* min-width: 200px; */
+  max-height: 300px;
+  /* height: 30vw; */
+  /* min-height: 200px; */
+  /* height:100%; */
+  /* position: absolute; */
+  /*z-index: -1;*/
+}
+
+div.col-sm-4 img:hover {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+div.title {
+  position: absolute;
+  vertical-align: middle;
+  text-align: center;
+  top: 45%;
+  font-size: 28px;
+  letter-spacing: 0.75vw;
+  color: rgb(76, 185, 185);
+  /* max-width: 300px; */
+  width: 100%;
+  /* min-width: 200px; */
+}
+
+div.text {
+  border-color: blue;
+  text-align: block;
+  vertical-align: middle;
+  margin-top: 20px;
+}
+
+.title span {
+  background-color: white;
+}
