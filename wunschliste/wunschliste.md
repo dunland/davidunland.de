@@ -3,6 +3,8 @@
 - **SSD Festplatte** für Lenovo W530, z.B. ebay --> "samsung 830 ssd"
 - **Arbeitsspeicher** für Lenovo W530, z.B. 8GB Modul: https://www.compuram.de/arbeitsspeicher/lenovo/notebook/thinkpad/w-series/w530-quad-core/?st=tab_maxmem
 - **lange Wollunterwäsche** von impulse oder hessnatur oder sowas (Unterhose + langärmliges Unterhämd)
+- (Geld für) eine Jeans
+- Joggingschuhe
 - eine **Klangschale** à la:   
   ![siehe google bilder "klangschale" :b](img/klangschale.png)
 - **Schallpladden**:
