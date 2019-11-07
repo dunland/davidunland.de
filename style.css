@@ -53,6 +53,33 @@ div.head {
   overflow:auto;
 } */
 
+/* hide divs with following classes from beginning: */
+div.audio {
+  visibility: hidden;
+  position: fixed;
+}
+
+div.pic {
+  visibility: hidden;
+  position: fixed;
+}
+
+div.vid {
+  visibility: hidden;
+  position: fixed;
+}
+
+div.live {
+  visibility: hidden;
+  position: fixed;
+}
+
+div.installation {
+  visibility: hidden;
+  position: fixed;
+}
+
+/* ? */
 div.col-sm-4 {
   /* overflow: auto; */
   /* display:inline-block; */
@@ -65,6 +92,7 @@ div.col-sm-4 {
   /*width and height of the column scale from 300px to 200px*/
 }
 
+/* image columns */
 div.col-sm-4 img {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
@@ -84,7 +112,7 @@ div.col-sm-4 img:hover {
   filter: alpha(opacity=40);
 }
 
-div.title {
+div.imageTitle { /* for use of titles spanning over images*/
   position: absolute;
   vertical-align: middle;
   text-align: center;
@@ -97,6 +125,14 @@ div.title {
   /* min-width: 200px; */
 }
 
+div.textTitle { /* for use is title as a header over text column */
+  text-align:center;
+  font-size:28px;
+  letter-spacing:0.75vw;
+  color: rgb(76, 185, 185);
+  width: 100%;
+}
+
 div.text {
   border-color: blue;
   text-align: block;
@@ -104,6 +140,17 @@ div.text {
   margin-top: 20px;
 }
 
-.title span {
+.imageTitle span {
   background-color: white;
+}
+
+#innerbottom {
+  display: table;
+  margin: 0 auto;
+}
+
+#outerbottom {
+  position:fixed;
+  bottom:30%;
+  width: 100%;
 }

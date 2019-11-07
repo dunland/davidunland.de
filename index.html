@@ -22,12 +22,166 @@
   <link rel="stylesheet" href="style.css">
 
   <title>D U N L A N D / Projekte</title>
+  <script>
+    var audioBtnClick = 0;
+    var vidBtnClick = 0;
+    var picBtnClick = 0;
+    var liveBtnClick = 0;
+    var installBtnClick = 0;
+
+    function locateButtons() {
+      if (audioBtnClick + vidBtnClick + picBtnClick + liveBtnClick + installBtnClick == 0)
+      {
+        document.getElementById("header").style.top = "30%";
+        // document.getElementById("bottom").style.top = "50%";
+        document.getElementById("outerbottom").style.position= "fixed";
+      }
+      else
+      {
+        document.getElementById("header").style.top = "0%";
+        // document.getElementById("bottom").style.top = "0%";
+        document.getElementById("outerbottom").style.position= "static";
+
+      }
+    }
+
+    //HIDE AUDIO UPON CLICK
+    function hideaudio() {
+      if (audioBtnClick == 1) {
+        var x = document.getElementsByClassName("audio");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "hidden";
+          x[i].style.position = "fixed";
+        }
+        document.getElementById("audiobtn").className = "btn btn-default"; //deactivate button graphics
+        audioBtnClick = 0;
+      } else {
+        var x = document.getElementsByClassName("audio");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "visible";
+          x[i].style.position = "static";
+        }
+        document.getElementById("audiobtn").className += " active"; //activate button graphics
+        audioBtnClick = 1;
+      }
+      locateButtons();
+    }
+
+    // //HIDE "live" UPON CLICK
+    function hidelive() {
+        if (liveBtnClick == 1) {
+            var x = document.getElementsByClassName("live");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.visibility = "hidden";
+                x[i].style.position = "fixed";
+            }
+            document.getElementById("livebtn").className = "btn btn-default"; //deactivate button graphics
+            liveBtnClick = 0;
+        } else {
+            var x = document.getElementsByClassName("live");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.visibility = "visible";
+                x[i].style.position = "static";
+            }
+            document.getElementById("livebtn").className += " active"; //activate button graphics
+            liveBtnClick = 1;
+        }
+        locateButtons();
+    }
+
+    //HIDE PICTURES UPON CLICK
+    function hidepics() {
+      if (picBtnClick == 1) {
+        var x = document.getElementsByClassName("pic");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "hidden";
+          x[i].style.position = "fixed";
+        }
+        document.getElementById("picbtn").className = "btn btn-default"; //deactivate button graphics
+        picBtnClick = 0;
+      } else {
+        var x = document.getElementsByClassName("pic");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "visible";
+          x[i].style.position = "static";
+        }
+        document.getElementById("picbtn").className += " active"; //activate button graphics
+        picBtnClick = 1;
+      }
+      locateButtons();
+    }
+
+    //HIDE INSTALLATIONS UPON CLICK
+    function hideinstall() {
+      if (installBtnClick == 1) {
+        var x = document.getElementsByClassName("installation");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "hidden";
+          x[i].style.position = "fixed";
+        }
+        document.getElementById("installbtn").className = "btn btn-default"; //deactivate button graphics
+        installBtnClick = 0;
+      } else {
+        var x = document.getElementsByClassName("installation");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "visible";
+          x[i].style.position = "static";
+        }
+        document.getElementById("installbtn").className += " active"; //activate button graphics
+        installBtnClick = 1;
+      }
+      locateButtons();
+    }
+
+    //HIDE VIDEOS UPON CLICK
+    function hidevids() {
+      if (vidBtnClick == 1) {
+        var x = document.getElementsByClassName("vid");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "hidden";
+          x[i].style.position = "fixed";
+        }
+        document.getElementById("vidbtn").className = "btn btn-default"; //deactivate button graphics
+        vidBtnClick = 0;
+      } else {
+        var x = document.getElementsByClassName("vid");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "visible";
+          x[i].style.position = "static";
+        }
+        document.getElementById("vidbtn").className += " active"; //activate button graphics
+        vidBtnClick = 1;
+      }
+      locateButtons();
+    }
+    /*  function projOpacity(){
+        document.getElementByClassName("projimg").style.opacity="0.5"; //makes the project image transparent
+        document.getElementByClassName("projtitle").style.visibility="visible"; //should make the project title visible
+        //only temporarily!
+      }*/
+  </script>
 </head>
 
 <body>
-  <div class="head" id="header">
+  <div class="head" id="header" style="top:30%">
     <center>
       <h1>D U N L A N D</h1>
+      <br>
+      <button type="button" class="btn btn-default inactive" id="audiobtn" onclick="hideaudio()">A u d i o </button>
+      <button type="button" class="btn btn-default inactive" id="picbtn" onclick="hidepics()">F o t o s</button>
+      <button type="button" class="btn btn-default inactive" id="vidbtn" onclick="hidevids()">V id eo s</button>
+      <button type="button" class="btn btn-default inactive" id="livebtn" onclick="hidelive()">L i v e</button>
+      <button type="button" class="btn btn-default inactive" id="installbtn" onclick="hideinstall()">Installationen</button>
     </center>
   </div>
 
@@ -47,18 +201,43 @@
 
   <div class="container">
 
+    <!--Axons & Wires-->
+    <div class="row audio live">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <!-- <div class="row" style="text-align:center"> -->
+          <!-- <div class="col-sm-4 features-content"> -->
+            <!-- <a href="http://radiophonicplaces.radioangrezi.de"> -->
+            <!-- <img src="images/rp_title.png"></a> -->
+            <!-- <div class="title" style="top:27%; line-height:2"> -->
+            <!-- <span>Radiophonic Places</span> -->
+            <!-- </div> -->
+          <!-- </div> -->
+          <!-- <div class="col-sm-8 features-content text"> -->
+            <p>
+              <li>Fake Experience Live @ Radio Angrezi Flutung October 11th, 2019</li>
+              <li>Axons & Wires @ At.Tension Festival 2019</li>
+            </p>
+            <p style="text-align:right">September 2019</p>
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+    <!-- <hr> -->
+
+
     <!--Radiophonic Places-->
-    <div class="row">
+    <div class="row audio live installation">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content"><a href="http://radiophonicplaces.radioangrezi.de">
               <img src="images/rp_title.png"></a>
-            <div class="title" style="top:27%; line-height:2">
-              <span>Radiophonic Places</span>
-            </div>
+            <!-- <div class="title" style="top:27%; line-height:2"> -->
+            <!-- </div> -->
           </div>
           <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>Radiophonic Places</span></div>
             <p>&emsp;A sound sculpture consisting of audio livestreams from several locations in a city. Transmitted through a network of wired and wireless infrastructures, protocols and apparatuses, and mixed algorithmically, the city sounds
               eventually reach your ears.
 
@@ -71,22 +250,23 @@
         </div>
       </div>
     </div>
-    <hr>
+    <!-- <hr> -->
 
 
     <!--Othering Machines II-->
-    <div class="row">
+    <div class="row mac installation">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content"><a href="https://vimeo.com/302322911">
               <img src="images/AcousticComm_title.jpg"></a>
-            <div class="title" style="top:27%; line-height:2">
-              <span>Acoustic Community</span>
-            </div>
+            <!-- <div class="imageTitle" style="top:27%; line-height:2"> -->
+            <!-- <span>Acoustic<br>Community</span> -->
+            <!-- </div> -->
             <!-- <div class="title" style="margin-top:35%"><span>Othering Machines</span></div> -->
           </div>
           <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>Acoustic Community</span></div>
             <p>&emsp;A system of fifty sound modules strives for a balanced state
               of harmony (in sound and light (color)). Background-noise and
               mismatching sound waves result in a chaotic cacophony.
@@ -108,20 +288,21 @@
         </div>
       </div>
     </div>
-    <hr>
+    <!-- <hr> -->
 
 
     <!--Othering Machines I-->
-    <div class="row">
+    <div class="row mac installation">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content"><a href="dao/index.html">
               <img src="dao/om_title.jpg"></a>
-            <div class="title"><span>Hearsay</span></div>
+            <!-- <div class="imageTitle"><span>Hearsay</span></div> -->
             <!-- <div class="title" style="margin-top:35%"><span>Othering Machines</span></div> -->
           </div>
           <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>Othering Machines</span></div>
             <p><i>Hearsay / Othering machines</i>
               <br>&emsp;Experimental simulations of social communication dynamics...
             </p>
@@ -136,18 +317,19 @@
     </div>
 
 
-    <hr>
+    <!-- <hr> -->
 
     <!--Erdscheibe-->
-    <div class="row">
+    <div class="row mac installation">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content"><a href="erdscheibe.html">
               <img src="http://david.unland.eu/erdscheibe/erdscheibe_title.jpg"></a>
-            <div class="title" style="top:17%"><span>Erdscheibe</span></div>
+            <!-- <div class="imageTitle" style="top:17%"><span>Erdscheibe</span></div> -->
           </div>
           <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>Erdscheibe</span></div>
             <p>&emsp;Die <i>Erdscheibe</i> ist eine Lichtinstallation, bei der ein
               Overheadprojektor eine mit Kristallen bedeckte Glasplatte durchleuchtet.
               Während die Scheibe ununterbrochen rotiert werden die kristallinen
@@ -168,17 +350,18 @@
       </div>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <!-- Loopings II -->
-    <div class="row">
+    <div class="row audio">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content"><a href="https://andorra-osna.bandcamp.com/album/2016"><img src="images/loopingsII.jpg"></a>
-            <div class="title"><span>Andorra - 2016</span></div>
+            <!-- <div class="imageTitle"><span>Andorra - 2016</span></div> -->
           </div>
           <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>Andorra - 2016</span></div>
             <p>&emsp;<i>Andorra 2016</i> on <a href="https://andorra-osna.bandcamp.com/album/2016">bandcamp</a>.
               <br>this stuff was made in loopwoodhausen, May-September 2016,
               all by ourselves (that's why you have to turn up the volume so far)
@@ -191,18 +374,19 @@
       </div>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <!-- Selbstporträt I -->
-    <div class="row">
+    <div class="row vid">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content">
             <a href="https://vimeo.com/161944614"><img src="images/kopfsache.jpg"></a>
-            <div class="title"><span>Self-Portrait I</span></div>
+            <!-- <div class="imageTitle"><span>Self-Portrait I</span></div> -->
           </div>
           <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>Self-Portrait I</span></div>
             <p>&emsp;A <i>Self-Portrait</i>.
               <br>Throughout the last couple of months, a timespan I used for thorough
               self-reflection and waiting, whilst acquiring the ability to
@@ -222,19 +406,20 @@
       </div>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <!-- Loopings I -->
-    <div class="row">
+    <div class="row audio">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content">
             <a href="https://andorra-osna.bandcamp.com/album/2015">
               <img src="images/loopingsI.png"></a>
-            <div class="title"><span>Andorra - 2015</span></div>
+            <!-- <div class="imageTitle"><span>Andorra - 2015</span></div> -->
           </div>
           <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>Andorra - 2015</span></div>
             <p>&emsp;<i>Andorra (2015)</i> is a 5 track-single-take-piece containing
               the sounds of leprosy mountains, noisy values and a forest in hectic.
               <p>&emsp;<i>Andorra (2015)</i> ist eine Aufnahme aus etwa fünf Liedern,
@@ -245,18 +430,19 @@
       </div>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <!-- EISLAND -->
-    <div class="row">
+    <div class="row vid audio">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content">
             <a href="https://vimeo.com/99192601"><img src="images/eisland.jpg"></a>
-            <div class="title"><span>EISLAND</span></div>
+            <!-- <div class="imageTitle"><span>EISLAND</span></div> -->
           </div>
           <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>EISLAND</span></div>
             <p>&emsp;<i>EISLAND</i> (Ice-Land) is just a little song that could never
               come close to anything I've experienced during my time in Iceland.
               <p>&emsp;<i>EISLAND</i> ist ein Lied mit Video, das nicht einmal ansatzweise
@@ -267,19 +453,20 @@
       </div>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <!-- Iceland pictures -->
-    <div class="row">
+    <div class="row pic">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content">
             <a href="iceland.html"><img src="images/iceland.jpg"></a>
-            <div class="title" style="top:5%; line-height:2">
-              <span>Pictures&shy; from &shy;Iceland</span></div>
+            <!-- <div class="imageTitle" style="top:5%; line-height:2">
+              <span>Pictures&shy; from &shy;Iceland</span></div> -->
           </div>
           <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>Pictures from Iceland</span></div>
             <p>&emsp;photography from Iceland
               <p style="text-align:right">2013-2014</p>
           </div>
@@ -287,14 +474,16 @@
       </div>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
 
-  </div>
   <p>
-    <div class="bottom" width="100%">
+  </div> <!-- container end-->
+    <div id="outerbottom">
+      <div id="innerbottom">
       <center>Kontakt: <img src="images/mailto.png" title="da vid [at] un land .eu" width="155px" height="22px"></center>
     </div>
+  </div>
   </p>
 </body>
 
