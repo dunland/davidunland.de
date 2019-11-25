@@ -1,5 +1,13 @@
+
+2019-11-22
+
+- "Live" button von anfang an aktiviert?
+- unterschiedliche Hintergründe je nach div.class?
+- Startseite mit upcoming actions (hidden wenn datum überschritten)
+- visibility counter für alle divs --> werden mit click auf kategorie auf- oder abgezählt
+
 10:19 04.05.2017
--Email/Kontakt & about & HOME auf jeder Projektseite (sonst wei� man nicht wo man ist wenn man extern verlinkt wird)
+-Email/Kontakt & about & HOME auf jeder Projektseite (sonst wei� man nicht wo man ist wenn man extern verlinkt wird)
 
 12:14 26.04.2017
 -aufbau index auf smartphone?
@@ -12,4 +20,4 @@
 -Inhalte: Erdscheibe, Andorra I & II, Fotos
 -font-size scaling: 1.75vw, minimum fonz-size?
 -buttons: style/text
--background-image: scans aus notizb�chern
+-background-image: scans aus notizb�chern
