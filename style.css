@@ -55,27 +55,27 @@ div.head {
 
 /* hide divs with following classes from beginning: */
 div.audio {
-  visibility: hidden;
+  /* visibility: hidden; */
   position: fixed;
 }
 
 div.pic {
-  visibility: hidden;
+  /* visibility: hidden; */
   position: fixed;
 }
 
 div.vid {
-  visibility: hidden;
+  /* visibility: hidden; */
   position: fixed;
 }
 
 div.live {
-  visibility: hidden;
+  /* visibility: hidden; */
   position: fixed;
 }
 
 div.installation {
-  visibility: hidden;
+  /* visibility: hidden; */
   position: fixed;
 }
 
@@ -133,6 +133,14 @@ div.textTitle { /* for use is title as a header over text column */
   width: 100%;
 }
 
+div.upcoming { /* for use is title as a header over text column */
+  text-align:center;
+  font-size:28px;
+  letter-spacing:0.75vw;
+  color: rgb(185, 76, 76);
+  width: 100%;
+}
+
 div.text {
   border-color: blue;
   text-align: block;
@@ -150,7 +158,8 @@ div.text {
 }
 
 #outerbottom {
-  position:fixed;
+  /* position:fixed; */
+  position: static;
   bottom:30%;
   width: 100%;
 }

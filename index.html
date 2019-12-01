@@ -30,20 +30,29 @@
     var installBtnClick = 0;
 
     function locateButtons() {
-      if (audioBtnClick + vidBtnClick + picBtnClick + liveBtnClick + installBtnClick == 0)
-      {
+      if (audioBtnClick + vidBtnClick + picBtnClick + liveBtnClick + installBtnClick == 0) {
         document.getElementById("header").style.top = "30%";
-        // document.getElementById("bottom").style.top = "50%";
-        document.getElementById("outerbottom").style.position= "fixed";
-      }
-      else
-      {
+        document.getElementById("outerbottom").style.position = "fixed";
+      } else {
         document.getElementById("header").style.top = "0%";
-        // document.getElementById("bottom").style.top = "0%";
-        document.getElementById("outerbottom").style.position= "static";
+        document.getElementById("outerbottom").style.position = "static";
 
       }
     }
+
+    //TODO: get this running and run on window load
+    // function makeVisible()
+    // {
+    //   if (document.getElementById("audiobtn").classList.contains(active))
+    //   {
+    //     var x = document.getElementsByClassName("audio");
+    //     var i;
+    //     for (i = 0; i < x.length; i++) {
+    //       x[i].style.visibility = "visible";
+    //       x[i].style.position = "static";
+    //     }
+    //   }
+    // }
 
     //HIDE AUDIO UPON CLICK
     function hideaudio() {
@@ -71,26 +80,26 @@
 
     // //HIDE "live" UPON CLICK
     function hidelive() {
-        if (liveBtnClick == 1) {
-            var x = document.getElementsByClassName("live");
-            var i;
-            for (i = 0; i < x.length; i++) {
-                x[i].style.visibility = "hidden";
-                x[i].style.position = "fixed";
-            }
-            document.getElementById("livebtn").className = "btn btn-default"; //deactivate button graphics
-            liveBtnClick = 0;
-        } else {
-            var x = document.getElementsByClassName("live");
-            var i;
-            for (i = 0; i < x.length; i++) {
-                x[i].style.visibility = "visible";
-                x[i].style.position = "static";
-            }
-            document.getElementById("livebtn").className += " active"; //activate button graphics
-            liveBtnClick = 1;
+      if (liveBtnClick == 1) {
+        var x = document.getElementsByClassName("live");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "hidden";
+          x[i].style.position = "fixed";
         }
-        locateButtons();
+        document.getElementById("livebtn").className = "btn btn-default"; //deactivate button graphics
+        liveBtnClick = 0;
+      } else {
+        var x = document.getElementsByClassName("live");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.visibility = "visible";
+          x[i].style.position = "static";
+        }
+        document.getElementById("livebtn").className += " active"; //activate button graphics
+        liveBtnClick = 1;
+      }
+      locateButtons();
     }
 
     //HIDE PICTURES UPON CLICK
@@ -164,6 +173,14 @@
       }
       locateButtons();
     }
+    document.addEventListener('DOMContentLoaded', function() {
+      // alert("Ready!");
+      hidelive();
+      hidepics();
+      hidevids();
+      hideaudio();
+      hideinstall();
+    }, false);
     /*  function projOpacity(){
         document.getElementByClassName("projimg").style.opacity="0.5"; //makes the project image transparent
         document.getElementByClassName("projtitle").style.visibility="visible"; //should make the project title visible
@@ -173,15 +190,16 @@
 </head>
 
 <body>
-  <div class="head" id="header" style="top:30%">
+  <!-- <div class="head" id="header" style="top:30%"> -->
+  <div class="head" id="header">
     <center>
       <h1>D U N L A N D</h1>
       <br>
-      <button type="button" class="btn btn-default inactive" id="audiobtn" onclick="hideaudio()">A u d i o </button>
-      <button type="button" class="btn btn-default inactive" id="picbtn" onclick="hidepics()">F o t o s</button>
-      <button type="button" class="btn btn-default inactive" id="vidbtn" onclick="hidevids()">V id eo s</button>
-      <button type="button" class="btn btn-default inactive" id="livebtn" onclick="hidelive()">L i v e</button>
-      <button type="button" class="btn btn-default inactive" id="installbtn" onclick="hideinstall()">Installationen</button>
+      <button type="button" class="btn btn-default active" id="audiobtn" onclick="hideaudio()">A u d i o </button>
+      <button type="button" class="btn btn-default active" id="picbtn" onclick="hidepics()">F o t o s</button>
+      <button type="button" class="btn btn-default active" id="vidbtn" onclick="hidevids()">V id eo s</button>
+      <button type="button" class="btn btn-default active" id="livebtn" onclick="hidelive()">L i v e</button>
+      <button type="button" class="btn btn-default active" id="installbtn" onclick="hideinstall()">Installationen</button>
     </center>
   </div>
 
@@ -201,51 +219,94 @@
 
   <div class="container">
 
+
+    <!--Fake Experience Konzertetw-->
+    <div class="row audio live" style="border:dotted">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <div class="row" style="text-align:center">
+          <div class="col-sm-4 features-content"><img src="images/fake.jpg">
+            <!-- <div class="title" style="top:27%; line-height:2"> -->
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-8 features-content text">
+            <div class="textTitle upcoming"><span>U P C O M I N G</span></div>
+            <p>
+              <b>Fake Experience Konzerte</b>
+              <p><b>Dec 17, 2019</b> - Lichter der Neustadt vor'm PAPP in Brem</p>
+              <p><b>Feb 21, 2019</b> - Schwule Sau Hannover</p>
+              <p><b>Feb 28, 2019</b> - Theater Bremen</p>
+
+                    <!-- <p style="text-align:right">Oktober 2019</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Places on Earth Episode 1: Chile-->
+    <div class="row audio live">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <div class="row" style="text-align:center">
+          <div class="col-sm-4 features-content"><iframe src="https://audiomack.com/embed/song/robodaff/places-on-earth-episode-1-chile?background=1" scrolling="no" width="300px" height="100" scrollbars="no" frameborder="0"></iframe>
+            <!-- <div class="title" style="top:27%; line-height:2"> -->
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-8 features-content text">
+            <div class="textTitle"><span>Places on Earth Episode 1: Chile</span></div>
+            <b>Places on Earth Episode 1: Chile</b>
+              <br><i>Places on Earth</i> is an audio program focusing on the sounds of and from Planet Earth. It is a show about field recordings, audio culture and cultural sounds.<br>
+              Chile has recently experienced a societal tremor, bringing gazillions of people to the streets to mess with their government. While citizens are using a broad palette of cultural instruments (theater, dance, chanting, ..) to express their distress, the sound of pans and pots mix with the carabineros' shooting on the streets..
+            <p>
+              The show was broadcasted and recorded on <a href="http://www.radioangrezi.de">Radio Angrezi</a> on Thursday, November 28th.
+                  <p style="text-align:right">November 2019</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <hr> -->
+
     <!--Fake Experience @ Radio Angrezi-->
     <div class="row audio live">
       <div class="col-sm-12" id="features">
         <p></p>
-        <!-- <div class="row" style="text-align:center"> -->
-          <!-- <div class="col-sm-4 features-content"> -->
-            <!-- <a href="http://radiophonicplaces.radioangrezi.de"> -->
-            <!-- <img src="images/rp_title.png"></a> -->
+        <div class="row" style="text-align:center">
+          <div class="col-sm-4 features-content"><iframe src="https://audiomack.com/embed/song/robodaff/live-radio-angrezi-flutung?background=1" scrolling="no" width="300px" height="100" scrollbars="no" frameborder="0"></iframe>
             <!-- <div class="title" style="top:27%; line-height:2"> -->
-            <!-- <span>Radiophonic Places</span> -->
             <!-- </div> -->
-          <!-- </div> -->
-          <!-- <div class="col-sm-8 features-content text"> -->
-            <p>
-              <li>Fake Experience Live @ Radio Angrezi Flutung October 11th, 2019. <a href="files/fake_experience_-_live_at_radio_angrezi_flutung_2019.mp3">Download</a> or listen:</li><br>
-		<iframe src="https://audiomack.com/embed/song/robodaff/live-radio-angrezi-flutung?background=1" scrolling="no" width="100%" height="152" scrollbars="no" frameborder="0"></iframe>
-            </p>
-            <p style="text-align:right">Oktober 2019</p>
-          <!-- </div> -->
-        <!-- </div> -->
+          </div>
+          <div class="col-sm-8 features-content text">
+            <!-- <div class="textTitle"><span>Radiophonic Places</span></div> -->
+            <p>&emsp; Fake Experience Live @ Radio Angrezi Flutung October 11th, 2019. (<a href="files/fake_experience_-_live_at_radio_angrezi_flutung_2019.mp3">>>Download<<</a>) <br>
+                  <p style="text-align:right">Oktober 2019</p>
+          </div>
+        </div>
       </div>
     </div>
     <!-- <hr> -->
 
     <!--Axons & Wires-->
-    <div class="row audio live">
-      <div class="col-sm-12" id="features">
-        <p></p>
-        <!-- <div class="row" style="text-align:center"> -->
-          <!-- <div class="col-sm-4 features-content"> -->
-            <!-- <a href="http://radiophonicplaces.radioangrezi.de"> -->
-            <!-- <img src="images/rp_title.png"></a> -->
-            <!-- <div class="title" style="top:27%; line-height:2"> -->
-            <!-- <span>Radiophonic Places</span> -->
-            <!-- </div> -->
-          <!-- </div> -->
-          <!-- <div class="col-sm-8 features-content text"> -->
-            <p>
-              <li>Axons & Wires @ At.Tension Festival 2019</li>
-            </p>
-            <p style="text-align:right">September 2019</p>
-          <!-- </div> -->
-        <!-- </div> -->
-      </div>
-    </div>
+    <!-- <div class="row audio live"> -->
+    <!-- <div class="col-sm-12" id="features"> -->
+    <!-- <p></p> -->
+    <!-- <div class="row" style="text-align:center"> -->
+    <!-- <div class="col-sm-4 features-content"> -->
+    <!-- <a href="http://radiophonicplaces.radioangrezi.de"> -->
+    <!-- <img src="images/rp_title.png"></a> -->
+    <!-- <div class="title" style="top:27%; line-height:2"> -->
+    <!-- <span>Radiophonic Places</span> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="col-sm-8 features-content text"> -->
+    <!-- <p> -->
+    <!-- Axons & Wires @ At.Tension Festival 2019 -->
+    <!-- </p> -->
+    <!-- <p style="text-align:right">September 2019</p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
     <!-- <hr> -->
 
 
@@ -500,10 +561,10 @@
     <!-- <hr> -->
 
 
-  <p>
+    <p>
   </div> <!-- container end-->
-    <div id="outerbottom">
-      <div id="innerbottom">
+  <div id="outerbottom">
+    <div id="innerbottom">
       <center>Kontakt: <img src="images/mailto.png" title="da vid [at] un land .eu" width="155px" height="22px"></center>
     </div>
   </div>
