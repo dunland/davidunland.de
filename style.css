@@ -9,6 +9,22 @@ html, body {
 
 }
 
+#header {
+  top: 30%;
+}
+
+#outerbottom {
+  /* top: 90%; */
+  position: fixed;
+  margin-top:60%;
+}
+
+#innerbottom {
+  /* position: fixed; */
+  /* top:90%; */
+  /* left:36%; */
+}
+
 /* For website headers */
 h1 {
   display: inline;
@@ -55,27 +71,27 @@ div.head {
 
 /* hide divs with following classes from beginning: */
 div.audio {
-  /* visibility: hidden; */
+  visibility: hidden;
   position: fixed;
 }
 
 div.pic {
-  /* visibility: hidden; */
+  visibility: hidden;
   position: fixed;
 }
 
 div.vid {
-  /* visibility: hidden; */
+  visibility: hidden;
   position: fixed;
 }
 
 div.live {
-  /* visibility: hidden; */
+  visibility: hidden;
   position: fixed;
 }
 
 div.installation {
-  /* visibility: hidden; */
+  visibility: hidden;
   position: fixed;
 }
 

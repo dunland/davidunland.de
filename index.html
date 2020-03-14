@@ -23,21 +23,23 @@
 
   <title>D U N L A N D / Projekte</title>
   <script>
-    var audioBtnClick = 0;
-    var vidBtnClick = 0;
-    var picBtnClick = 0;
-    var liveBtnClick = 0;
-    var installBtnClick = 0;
+    // var audioBtnClick = 0;
+    // var vidBtnClick = 0;
+    // var picBtnClick = 0;
+    // var liveBtnClick = 0;
+    // var installBtnClick = 0;
 
     function locateButtons() {
-      if (audioBtnClick + vidBtnClick + picBtnClick + liveBtnClick + installBtnClick == 0) {
-        document.getElementById("header").style.top = "30%";
-        document.getElementById("outerbottom").style.position = "fixed";
-      } else {
+      // if (audioBtnClick + vidBtnClick + picBtnClick + liveBtnClick + installBtnClick == 0) {
+      //   document.getElementById("header").style.top = "30%";
+      //   document.getElementById("outerbottom").style.position = "fixed";
+      // } else {
         document.getElementById("header").style.top = "0%";
         document.getElementById("outerbottom").style.position = "static";
+        document.getElementById("outerbottom").style.margin = "30px";
 
-      }
+
+      // }
     }
 
     //TODO: get this running and run on window load
@@ -54,138 +56,152 @@
     //   }
     // }
 
-    //HIDE AUDIO UPON CLICK
-    function hideaudio() {
-      if (audioBtnClick == 1) {
-        var x = document.getElementsByClassName("audio");
+    //SHOW AUDIO UPON CLICK
+    function showAudio() {
+      if (!document.getElementById("audiobtn").classList.contains("active")) {
+        // var x = document.getElementsByClassName("audio");
+        var x = document.getElementsByClassName("row_container");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "hidden";
-          x[i].style.position = "fixed";
+          if (x[i].classList.contains("audio")) {
+            x[i].style.visibility = "visible";
+            x[i].style.position = "static";
+          } else {
+            x[i].style.visibility = "hidden";
+            x[i].style.position = "fixed";
+          }
         }
-        document.getElementById("audiobtn").className = "btn btn-default"; //deactivate button graphics
-        audioBtnClick = 0;
-      } else {
-        var x = document.getElementsByClassName("audio");
+        var  x = document.getElementsByClassName("btn");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "visible";
-          x[i].style.position = "static";
+          if (x[i].classList.contains("audiobtn")) {
+            document.getElementById("audiobtn").className += " active"; //activate button graphics
+          } else
+          {
+            document.getElementById("audiobtn").className = "btn btn-default"; //deactivate button graphics
+          }
         }
-        document.getElementById("audiobtn").className += " active"; //activate button graphics
-        audioBtnClick = 1;
+        locateButtons();
       }
-      locateButtons();
     }
 
-    // //HIDE "live" UPON CLICK
-    function hidelive() {
-      if (liveBtnClick == 1) {
-        var x = document.getElementsByClassName("live");
+    function showLive() {
+      if (!document.getElementById("livebtn").classList.contains("active")) {
+        // var x = document.getElementsByClassName("audio");
+        var x = document.getElementsByClassName("row_container");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "hidden";
-          x[i].style.position = "fixed";
+          if (x[i].classList.contains("live")) {
+            x[i].style.visibility = "visible";
+            x[i].style.position = "static";
+          } else {
+            x[i].style.visibility = "hidden";
+            x[i].style.position = "fixed";
+          }
         }
-        document.getElementById("livebtn").className = "btn btn-default"; //deactivate button graphics
-        liveBtnClick = 0;
-      } else {
-        var x = document.getElementsByClassName("live");
+        var  x = document.getElementsByClassName("btn");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "visible";
-          x[i].style.position = "static";
+          if (x[i].classList.contains("livebtn")) {
+            document.getElementById("livebtn").className += " active"; //activate button graphics
+          } else
+          {
+            document.getElementById("livebtn").className = "btn btn-default"; //deactivate button graphics
+          }
         }
-        document.getElementById("livebtn").className += " active"; //activate button graphics
-        liveBtnClick = 1;
+        locateButtons();
       }
-      locateButtons();
     }
 
-    //HIDE PICTURES UPON CLICK
-    function hidepics() {
-      if (picBtnClick == 1) {
-        var x = document.getElementsByClassName("pic");
+    function showPics() {
+      if (!document.getElementById("picbtn").classList.contains("active")) {
+        // var x = document.getElementsByClassName("audio");
+        var x = document.getElementsByClassName("row_container");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "hidden";
-          x[i].style.position = "fixed";
+          if (x[i].classList.contains("pic")) {
+            x[i].style.visibility = "visible";
+            x[i].style.position = "static";
+          } else {
+            x[i].style.visibility = "hidden";
+            x[i].style.position = "fixed";
+          }
         }
-        document.getElementById("picbtn").className = "btn btn-default"; //deactivate button graphics
-        picBtnClick = 0;
-      } else {
-        var x = document.getElementsByClassName("pic");
+        var  x = document.getElementsByClassName("btn");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "visible";
-          x[i].style.position = "static";
+          if (x[i].classList.contains("picbtn")) {
+            document.getElementById("picbtn").className += " active"; //activate button graphics
+          } else
+          {
+            document.getElementById("picbtn").className = "btn btn-default"; //deactivate button graphics
+          }
         }
-        document.getElementById("picbtn").className += " active"; //activate button graphics
-        picBtnClick = 1;
+        locateButtons();
       }
-      locateButtons();
     }
 
-    //HIDE INSTALLATIONS UPON CLICK
-    function hideinstall() {
-      if (installBtnClick == 1) {
-        var x = document.getElementsByClassName("installation");
+    function showInstallations() {
+      if (!document.getElementById("installbtn").classList.contains("active")) {
+        // var x = document.getElementsByClassName("audio");
+        var x = document.getElementsByClassName("row_container");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "hidden";
-          x[i].style.position = "fixed";
+          if (x[i].classList.contains("installation")) {
+            x[i].style.visibility = "visible";
+            x[i].style.position = "static";
+          } else {
+            x[i].style.visibility = "hidden";
+            x[i].style.position = "fixed";
+          }
         }
-        document.getElementById("installbtn").className = "btn btn-default"; //deactivate button graphics
-        installBtnClick = 0;
-      } else {
-        var x = document.getElementsByClassName("installation");
+        var  x = document.getElementsByClassName("btn");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "visible";
-          x[i].style.position = "static";
+          if (x[i].classList.contains("installbtn")) {
+            document.getElementById("installbtn").className += " active"; //activate button graphics
+          } else
+          {
+            document.getElementById("installbtn").className = "btn btn-default"; //deactivate button graphics
+          }
         }
-        document.getElementById("installbtn").className += " active"; //activate button graphics
-        installBtnClick = 1;
+        locateButtons();
       }
-      locateButtons();
     }
 
-    //HIDE VIDEOS UPON CLICK
-    function hidevids() {
-      if (vidBtnClick == 1) {
-        var x = document.getElementsByClassName("vid");
+    function showVids() {
+      if (!document.getElementById("vidbtn").classList.contains("active")) {
+        // var x = document.getElementsByClassName("audio");
+        var x = document.getElementsByClassName("row_container");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "hidden";
-          x[i].style.position = "fixed";
+          if (x[i].classList.contains("vid")) {
+            x[i].style.visibility = "visible";
+            x[i].style.position = "static";
+          } else {
+            x[i].style.visibility = "hidden";
+            x[i].style.position = "fixed";
+          }
         }
-        document.getElementById("vidbtn").className = "btn btn-default"; //deactivate button graphics
-        vidBtnClick = 0;
-      } else {
-        var x = document.getElementsByClassName("vid");
+        var  x = document.getElementsByClassName("btn");
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].style.visibility = "visible";
-          x[i].style.position = "static";
+          if (x[i].classList.contains("vidbtn")) {
+            document.getElementById("vidbtn").className += " active"; //activate button graphics
+          } else
+          {
+            document.getElementById("vidbtn").className = "btn btn-default"; //deactivate button graphics
+          }
         }
-        document.getElementById("vidbtn").className += " active"; //activate button graphics
-        vidBtnClick = 1;
+        locateButtons();
       }
-      locateButtons();
     }
+
     document.addEventListener('DOMContentLoaded', function() {
       // alert("Ready!");
-      hidelive();
-      hidepics();
-      hidevids();
-      hideaudio();
-      hideinstall();
+
     }, false);
-    /*  function projOpacity(){
-        document.getElementByClassName("projimg").style.opacity="0.5"; //makes the project image transparent
-        document.getElementByClassName("projtitle").style.visibility="visible"; //should make the project title visible
-        //only temporarily!
-      }*/
+
   </script>
 </head>
 
@@ -195,40 +211,27 @@
     <center>
       <h1>D U N L A N D</h1>
       <br>
-      <button type="button" class="btn btn-default active" id="audiobtn" onclick="hideaudio()">A u d i o </button>
-      <button type="button" class="btn btn-default active" id="picbtn" onclick="hidepics()">F o t o s</button>
-      <button type="button" class="btn btn-default active" id="vidbtn" onclick="hidevids()">V id eo s</button>
-      <button type="button" class="btn btn-default active" id="livebtn" onclick="hidelive()">L i v e</button>
-      <button type="button" class="btn btn-default active" id="installbtn" onclick="hideinstall()">Installationen</button>
+      <button type="button" class="btn btn-default" id="audiobtn" onclick="showAudio()">A u d i o </button>
+      <button type="button" class="btn btn-default" id="installbtn" onclick="showInstallations()">Installationen</button>
+      <button type="button" class="btn btn-default" id="livebtn" onclick="showLive()">L i v e</button>
+      <button type="button" class="btn btn-default" id="vidbtn" onclick="showVids()">V id eo s</button>
+      <button type="button" class="btn btn-default" id="picbtn" onclick="showPics()">F o t o s</button>
     </center>
   </div>
 
   <!-- an invisible div behind the header-->
   <div style="height:10vw" style="width:100%"></div>
 
-  <!-- <div class="container-fluid" style="background-color:lightblue">
-    <p>full-width container</p>
-   three columns that resize if width=768px or larger:
-    below that width, they will stack
-    <div class="row">
-      <div class="col-sm-4">column 1</div>
-      <div class="col-sm-4">nummero 2</div>
-      <div class="col-sm-4">dreieiei</div>
-    </div>
-  </div> -->
-
   <div class="container">
 
 
     <!--Fake Experience Konzertetw-->
-    <div class="row audio live" style="background-color:rgb(255, 251, 242)"><p>
+    <!-- <div class="row_container audio live" style="background-color:rgb(255, 251, 242)"><p>
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
           <div class="col-sm-4 features-content"><img src="images/fakeSin_2020-01-30_silly.jpg">
-            <!-- <div class="title" style="top:27%; line-height:2"> -->
-            <!-- </div> -->
-          </div>
+#          </div>
           <div class="col-sm-8 features-content text">
             <div class="textTitle upcoming"><span>U P C O M I N G</span></div>
             <p>
@@ -236,15 +239,14 @@
               <p><b>Feb 21, 2019</b> - <a href=https://www.schwulesauhannover.de/>Schwule Sau Hannover</a></p>
               <p><b>Feb 28, 2019</b> - <a href=https://www.theaterbremen.de/de_DE/kalender/fake-experience.16372096>Theater Bremen</a></p>
 
-                    <!-- <p style="text-align:right">Oktober 2019</p> -->
-          </div>
+#          </div>
         </div>
       </div>
       <p>
-    </div>
+    </div> -->
 
     <!--Sound and Time Essay-->
-    <div class="row">
+    <div class="row_container audio">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -262,7 +264,7 @@
     <!-- <hr> -->
 
     <!--Places on Earth Episode 1: Chile-->
-    <div class="row audio live">
+    <div class="row_container audio live">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -285,7 +287,7 @@
     <!-- <hr> -->
 
     <!--Fake Experience @ Radio Angrezi-->
-    <div class="row audio live">
+    <div class="row_container audio live">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -328,7 +330,7 @@
 
 
     <!--Radiophonic Places-->
-    <div class="row audio live installation">
+    <div class="row_container audio live installation">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -355,7 +357,7 @@
 
 
     <!--Othering Machines II-->
-    <div class="row mac installation">
+    <div class="row_container mac installation">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -393,7 +395,7 @@
 
 
     <!--Othering Machines I-->
-    <div class="row mac installation">
+    <div class="row_container mac installation">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -421,7 +423,7 @@
     <!-- <hr> -->
 
     <!--Erdscheibe-->
-    <div class="row mac installation">
+    <div class="row_container mac installation">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -454,7 +456,7 @@
     <!-- <hr> -->
 
     <!-- Loopings II -->
-    <div class="row audio">
+    <div class="row_container audio">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -478,7 +480,7 @@
     <!-- <hr> -->
 
     <!-- Selbstporträt I -->
-    <div class="row vid">
+    <div class="row_container vid">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -510,7 +512,7 @@
     <!-- <hr> -->
 
     <!-- Loopings I -->
-    <div class="row audio">
+    <div class="row_container audio">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -534,7 +536,7 @@
     <!-- <hr> -->
 
     <!-- EISLAND -->
-    <div class="row vid audio">
+    <div class="row_container vid audio">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -557,7 +559,7 @@
     <!-- <hr> -->
 
     <!-- Iceland pictures -->
-    <div class="row pic">
+    <div class="row_container pic">
       <div class="col-sm-12" id="features">
         <p></p>
         <div class="row" style="text-align:center">
@@ -581,9 +583,13 @@
     <p>
   </div> <!-- container end-->
   <div id="outerbottom">
+    <center>
     <div id="innerbottom">
+      <p>
       <center>Kontakt: <img src="images/mailto.png" title="da vid [at] un land .eu" width="155px" height="22px"></center>
+    </p>
     </div>
+  </center>
   </div>
   </p>
 </body>
