@@ -1,0 +1,79 @@
+<html>
+<head>
+
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <title>D U N L A N D : SUPER MUSCLE</title>
+</head>
+
+<body>
+  <center>
+    <h1>SUPER MUSCLE</h1>
+    <h2>Summoning Percussive Music Using Live Electronics</h2>
+    <h3> (2020) </h3>
+    <div class="container-fluid" style="max-width:700"><!--volle Breite aber kann hr nicht anzeigen-->
+
+      <p><img src="title.JPG" alt="title image" width="640"></p>
+      <p><iframe src="https://player.vimeo.com/video/489299324" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe></p>
+      <h3>Description:</h3>
+
+      <p>SUPER MUSCLE is an embedded platform for real-time composition and improvisation on a Drum Set using Live Electronics. It combines the sounds of an acoustic drum set with electronic sounds of physical synthesizers. The system is
+        sophisticated
+        enough to detect rhythms and trigger sounds, while the drummer does not have to care about neither turning knobs on external devices nor a backtrack. The only human-machine interfaces should be the sticks and the drums. Plug&amp;Play is an
+        essential requirement that I have towards the system I built, and it should prevail over all extensions I will probably add to it.</p>
+      <p><img src="box.jpg" alt="physical box embedding SUPER MUSCLE" width="640"></p>
+      <p>The guitar world is dominated by legions of effect pedals, bringing us mostly single-function-effects like delays, reverbs, tremolos, choruses and distortions. SUPER MUSCLE extends this idea to the world of percussion. It is a first approach
+        to
+        explore what an equivalent drum effects box would require.</p>
+      <p><img src="overview.png" alt="Overview of the Setup" width="640"></p>
+      <p>The play of the Drum Set will be recognized by the microcontroller. Incoming signals can be processed and used to trigger MIDI signals on external devices. Auxiliary interfaces such as foot switches and knobs can be implemented.
+        Additionally,
+        actuators like transducers or motors could be attached to create a more physical experience.
+        The capacities of the used processor allow the additional communication with a computer to
+        generate real-time visuals to the music.</p>
+      <p><img src="visuals.png" alt="Visuals" width="640"></p>
+      <p>A processing sketch is fed through the Serial interface of the Microcontroller, supplying a Monitor capable of repesenting the log of the played rhythm. Informed by the rhythm’s parameters, an aesthetic output can be created, that (can be
+        both
+        visually appealing and) can help acquiring an intuitive access to the machine’s metadata.</p>
+      <h3>Features:</h3>
+      <ul>
+        <li>a variety of instrument effects that can trigger MIDI notes and change MIDI CC values</li>
+        <li>Live composition based on beat log parameters - such as the density, regularity, accuracy and speed of the playing.</li>
+        <li>reliable stroke detection and quantization system with tap tempo assigned to any instrument</li>
+        <li>possibility to connect MIDI devices (Synthesizers and similar) and non-MIDI-machinery, such as motors, transducers, lights, …</li>
+        <li>for many more features read the manual at the <a href="https://github.com/dunland/muscle">project’s GitHub Site</a></li>
+      </ul>
+      <p><img src="setup.JPG" alt="Visuals" width="640"></p>
+      <h3>Links:</h3>
+      <p><a href="http://david.unland.eu/muscle">Project Website</a></p>
+      <p><a href="https://github.com/dunland/muscle">project GitHub Code repository &amp; Documentation</a></p>
+
+  </center>
+</div> <!-- container end-->
+
+  <div id="outerbottom">
+    <center>
+      <div id="innerbottom">
+        <p>
+          <center>k o n t a k t : <img src="http://david.unland.eu/images/mailto.png" title="da vid [at] un land .eu" width="155px"></center>
+        </p>
+      </div>
+</body>
+
+</html>
