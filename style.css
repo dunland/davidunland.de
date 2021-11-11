@@ -80,6 +80,15 @@ h2 {
   font-size: 3vw;
 }
 
+/* For website subheaders */
+h3 {
+  display: inline;
+  font-style: justify;
+  color: rgba(146, 204, 204, 0.68);
+  letter-spacing: 0.8vw;
+  font-size: 2vw;
+}
+
 div {
   /* border: solid;
   border-color: black; */
