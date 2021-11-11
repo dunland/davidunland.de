@@ -21,274 +21,233 @@
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <title>D U N L A N D / Projekte</title>
-  <!--<script>
-    // var audioBtnClick = 0;
-    // var vidBtnClick = 0;
-    // var picBtnClick = 0;
-    // var liveBtnClick = 0;
-    // var installBtnClick = 0;
-
-    function locateButtons() {
-      // if (audioBtnClick + vidBtnClick + picBtnClick + liveBtnClick + installBtnClick == 0) {
-      //   document.getElementById("header").style.top = "30%";
-      //   document.getElementById("outerbottom").style.position = "fixed";
-      // } else {
-        document.getElementById("header").style.top = "0%";
-        // document.getElementById("outerbottom").style.position = "static";
-        // document.getElementById("outerbottom").style.margin = "30px";
-
-
-      // }
-    }
-
-    //TODO: get this running and run on window load
-    // function makeVisible()
-    // {
-    //   if (document.getElementById("audiobtn").classList.contains(active))
-    //   {
-    //     var x = document.getElementsByClassName("audio");
-    //     var i;
-    //     for (i = 0; i < x.length; i++) {
-    //       x[i].style.visibility = "visible";
-    //       x[i].style.position = "static";
-    //     }
-    //   }
-    // }
-
-    //SHOW AUDIO UPON CLICK
-    function showAudio() {
-      if (!document.getElementById("audiobtn").classList.contains("active")) {
-        // var x = document.getElementsByClassName("audio");
-        var x = document.getElementsByClassName("row_container");
-        var line = document.getElementsByClassName("audioLine");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("audio")) {
-            x[i].style.visibility = "visible";
-            x[i].style.position = "static";
-            if (i < line.length) line[i].style.visibility = "visible";
-          } else {
-            x[i].style.visibility = "hidden";
-            x[i].style.position = "fixed";
-            if (i < line.length) line[i].style.visibility = "hidden";
-          }
-        }
-        var  x = document.getElementsByClassName("btn");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("audiobtn")) {
-            document.getElementById("audiobtn").className += " active"; //activate button graphics
-          } else
-          {
-            document.getElementById("audiobtn").className = "btn btn-default"; //deactivate button graphics
-          }
-        }
-        locateButtons();
-      }
-    }
-
-    function showLive() {
-      if (!document.getElementById("livebtn").classList.contains("active")) {
-        // var x = document.getElementsByClassName("audio");
-        var x = document.getElementsByClassName("row_container");
-        var line = document.getElementsByClassName("liveLine");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("live")) {
-            x[i].style.visibility = "visible";
-            x[i].style.position = "static";
-            if (i < line.length) line[i].style.visibility = "visible";
-          } else {
-            x[i].style.visibility = "hidden";
-            x[i].style.position = "fixed";
-            if (i < line.length) line[i].style.visibility = "hidden";
-          }
-        }
-        var  x = document.getElementsByClassName("btn");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("livebtn")) {
-            document.getElementById("livebtn").className += " active"; //activate button graphics
-          } else
-          {
-            document.getElementById("livebtn").className = "btn btn-default"; //deactivate button graphics
-          }
-        }
-        locateButtons();
-      }
-    }
-
-    function showPics() {
-      if (!document.getElementById("picbtn").classList.contains("active")) {
-        // var x = document.getElementsByClassName("audio");
-        var x = document.getElementsByClassName("row_container");
-        var line = document.getElementsByClassName("picLine");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("pic")) {
-            x[i].style.visibility = "visible";
-            x[i].style.position = "static";
-            if (i < line.length) line[i].style.visibility = "visible";
-          } else {
-            x[i].style.visibility = "hidden";
-            x[i].style.position = "fixed";
-            if (i < line.length) line[i].style.visibility = "hidden";
-          }
-        }
-        var  x = document.getElementsByClassName("btn");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("picbtn")) {
-            document.getElementById("picbtn").className += " active"; //activate button graphics
-          } else
-          {
-            document.getElementById("picbtn").className = "btn btn-default"; //deactivate button graphics
-          }
-        }
-        locateButtons();
-      }
-    }
-
-    function showInstallations() {
-      if (!document.getElementById("installbtn").classList.contains("active")) {
-        // var x = document.getElementsByClassName("audio");
-        var x = document.getElementsByClassName("row_container");
-        var line = document.getElementsByClassName("installLine");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("installation")) {
-            x[i].style.visibility = "visible";
-            x[i].style.position = "static";
-            if (i < line.length) line[i].style.visibility = "visible";
-          } else {
-            x[i].style.visibility = "hidden";
-            x[i].style.position = "fixed";
-            if (i < line.length) line[i].style.visibility = "hidden";
-          }
-        }
-        var  x = document.getElementsByClassName("btn");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("installbtn")) {
-            document.getElementById("installbtn").className += " active"; //activate button graphics
-          } else
-          {
-            document.getElementById("installbtn").className = "btn btn-default"; //deactivate button graphics
-          }
-        }
-        locateButtons();
-      }
-    }
-
-    function showVids() {
-      if (!document.getElementById("vidbtn").classList.contains("active")) {
-        // var x = document.getElementsByClassName("audio");
-        var x = document.getElementsByClassName("row_container");
-        var line = document.getElementsByClassName("vidLine");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("vid")) {
-            x[i].style.visibility = "visible";
-            x[i].style.position = "static";
-            if (i < line.length) line[i].style.visibility = "visible";
-          } else {
-            x[i].style.visibility = "hidden";
-            x[i].style.position = "fixed";
-            if (i < line.length) line[i].style.visibility = "hidden";
-          }
-        }
-        var  x = document.getElementsByClassName("btn");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          if (x[i].classList.contains("vidbtn")) {
-            document.getElementById("vidbtn").className += " active"; //activate button graphics
-          } else
-          {
-            document.getElementById("vidbtn").className = "btn btn-default"; //deactivate button graphics
-          }
-        }
-        locateButtons();
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      // alert("Ready!");
-
-    }, false);
-
-  </script>
--->
+  <title>D U N L A N D / News</title>
 </head>
+
 <body>
-  <!-- <div class="head" id="header" style="top:30%"> -->
   <div class="head" id="header">
     <center>
-      <a href="http://david.unland.eu"><h1>D U N L A N D</h1></a>
+      <a href="http://david.unland.eu">
+        <h1>D U N L A N D</h1>
+      </a>
       <br>
-      <!-- <button type="button" class="btn btn-default" id="audiobtn" onclick="showAudio()">A u d i o </button>
-      <button type="button" class="btn btn-default" id="installbtn" onclick="showInstallations()">Installationen</button>
-      <button type="button" class="btn btn-default" id="livebtn" onclick="showLive()">L i v e</button>
-      <button type="button" class="btn btn-default" id="vidbtn" onclick="showVids()">V id eo s</button>
-      <button type="button" class="btn btn-default" id="picbtn" onclick="showPics()">F o t o s</button> -->
       <div>
-      <a href="musik.html" target="content" class="menu">Musik</a> &#8212;
-      <a href="installations.html" target="content" class="menu">Experimente</a> &#8212;
-      <a href="video.html" target="content" class="menu">Video</a> &#8212;
-      <a href="radio.html" target="content" class="menu">Radio</a> &#8212;
-      <a href="photo.html" target="content" class="menu">Photo</a>
-    </div>
+        <a href="musik.html" target="content" class="menu">Musik</a> &#8212;
+        <a href="installations.html" target="content" class="menu">Experimente</a> &#8212;
+        <a href="video.html" target="content" class="menu">Video</a> &#8212;
+        <a href="radio.html" target="content" class="menu">Radio</a> &#8212;
+        <a href="photo.html" target="content" class="menu">Photo</a>
+      </div>
     </center>
   </div>
 
+  <div class="container">
+      <!-- Animal Dreams: Highlights over Stöðvarfjörður -->
+      <div class="row audio">
+        <div class="col-sm-12" id="features">
+          <p></p>
+          <div class="row">
+            <div class="col-sm-4 features-content">
+              <a href="https://animal-dreams.bandcamp.com/album/high-lights-over-st-varfj-r-ur"><img src="images/animal-dreams_highlights.jpg" title="High:lights over Stöðvarfjörður by Animal Dreams"></a>
+            </div>
+            <div class="col-sm-8 features-content text">
+              <p><b>2021-11-11:</b>Just released <i>Animal Dreams - High:lights over Stöðvarfjörður</i> on <a href="">bandcamp</a>!
+                <br><br>Two songs I recorded in the Fish Factory Creative Center in Stöðvarfjörður, East Iceland, in October 2021, recorded solely with a Zoom H4N field recorder. 
+                <br><br>Cover Artwork by Mary Kate Noonan! -- <a href="www.instagram.com/mk.noonan.art/">instagram.com/mk.noonan.art</a>
+              </p>
+              <p style="text-align:right">October 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="audioLine">
 
-  <!-- an invisible div behind the header, only needed when .head position:fixed-->
-  <!--<div style="height:10vw" style="width:100%; border:none"></div>-->
-  <!--<div style="height:10vw" style="width:100%; border:none"></div>-->
+    <!-- MOUNTAIN SCANNER-->
+    <div class="row">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <div class="col-sm-4 features-content">
+          <a href="http://david.unland.eu/mountainScanner"><img
+              src="mountainScanner/images/mountainScanner-animatedHead.gif"></a>
+        </div>
 
-  <!--div class="container">  <!--nicht volle Breite, zeigt hr in kleinem Modus an-->
-  <!-- <hr> -->
-   <div class="container-fluid"> <!--volle Breite aber kann hr nicht anzeigen-->
-    <iframe src="neues.html" name="content" style="width:100%; height:75vh"></iframe>
-    <!--
-    <hr class="audioLine" style="visibility:hidden"> -->
-    <!--Axons & Wires-->
-    <!-- <div class="row audio live"> -->
-    <!-- <div class="col-sm-12" id="features"> -->
-    <!-- <p></p> -->
-    <!-- <div class="row" style="text-align:center"> -->
-    <!-- <div class="col-sm-4 features-content"> -->
-    <!-- <a href="http://radiophonicplaces.radioangrezi.de"> -->
-    <!-- <img src="images/rp_title.png"></a> -->
-    <!-- <div class="title" style="top:27%; line-height:2"> -->
-    <!-- <span>Radiophonic Places</span> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- <div class="col-sm-8 features-content text"> -->
-    <!-- <p> -->
-    <!-- Axons & Wires @ At.Tension Festival 2019 -->
-    <!-- </p> -->
-    <!-- <p style="text-align:right">September 2019</p> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- <hr> -->
+        <div class="col-sm-8 features-content text">
+          <div class="textTitle"><span>mountain scanner</span></div>
+          <p><b>2021-10-30:</b> find the documentation of my <a href="mountainScanner/">mountain scanner</a> project
+            on the website ‒ a project I was lucky to create during my stay at the <a href="inhere.is"
+              target="blank_">fish factory artist residency</a> in October 2021.
 
-    <p>
-  </div> <!-- container end-->
-
-
-  <div id="outerbottom">
-    <center>
-    <div id="innerbottom">
-      <p>
-      <center>k o n t a k t : <img src="images/mailto.png" title="da vid [at] un land .eu" width="155px"></center>
-    </p>
+        </div>
+      </div>
     </div>
-  </center>
+
+    <hr class="installLine">
+
+    <!-- fliegende Wüstenzitrone im Proberaum -->
+    <div class="row">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <div class="col-sm-4 features-content">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/lIa-xBCqfAs" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-8 features-content text">
+          <br><b>2021-04-04:</b> Rhizophora playing "fliegende Wüstenzitrone" with drum-reactive Visuals processed
+          by the
+          <a href="http://david.unland.eu/muscle">SUPERMUSCLE</a>.
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- SUPER MUSCLE -->
+    <div class="row">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <div class="col-sm-4 features-content">
+          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/489299324?h=03c34af466&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="SUPER MUSCLE Improvisation #1"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>        </div>
+        <div class="col-sm-8 features-content text">
+          <div class="textTitle"><span>SUPER MUSCLE</span></div>
+          <br><b>2020-12-11:</b> <i>SUPER MUSCLE: Summoning Percussive Music Using Live Electronics</i> is the title
+          of my
+          Master Thesis Project of the study program Digital Media @ HfK Bremen.
+          <br>Find the project website <a href="muscle">>>here<<< /a>.
+              <br>The source code is available on <a href="https://github.com/dunland/muscle"
+                target="_blank">GitHub</a>.
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Debris -->
+    <div class="row">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <div class="col-sm-4 features-content">
+          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/458770953?h=bb4451f618&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Debris (2020)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>        </div>
+        <div class="col-sm-8 features-content text">
+          <div class="textTitle"><span><i>Debris</i></span></div>
+
+          <br><b>2020-11-24:</b> Finally uploaded a documentation of <a href="http://david.unland.eu/debris"
+            target="_blank">"<i>Debris</i>"</a> on my website.
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- SUPERMUSCLE tests #1 -->
+    <div class="row">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <div class="col-sm-4 features-content">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/LWqzEd7tHn0" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-8 features-content text">
+          <br><b>2020-10-30:</b> trying to control the delayTime of a microKORG with my snare drum..
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- SUPERMUSCLE tests #2 -->
+    <div class="row">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <div class="col-sm-4 features-content">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/JWPHVcNEvGU" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-8 features-content text">
+          <br><b>2020-09-08:</b> Testing MIDI CC changes triggered with drums on prepped drumset
+          <br> some more outcomes can be listened to <a
+            href="https://audiomack.com/robodaff/song/swell-demo-01-2020-09-08">here</a> and <a
+            href="https://audiomack.com/robodaff/song/swell-demo-02-2020-09-08">here</a>.
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Doule Squirrel @ Schwankhalle Bremen -->
+    <div class="row">
+      <div class="col-sm-12" id="features">
+        <p></p>
+        <div class="col-sm-4 features-content">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/qLZscIu9xiA" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-8 features-content text">
+          <br><b>2020-06-10:</b> Live-Gedängel auf einem präpariertem Schlagzeug als <i>Double Squirrel</i>
+          bei
+          <a href="http://www.anachronism.de">Anachronism</a> in der Schwankhalle Bremen - <a
+            href="https://www.twitch.tv/anachronismstream/videos">https://www.twitch.tv/anachronismstream/videos</a>
+          -
+          <a href="https://www.youtube.com/embed/qLZscIu9xiA">https://www.youtube.com/embed/qLZscIu9xiA</a>
+          <p></p>
+          <p>&emsp; First concert as <i>Double Squirrel</i> with makeshift Drums+Live-Electronics and improvised Polyrhythimcs in C-phrygian at <a href="http://www.anachronism.de">Anachronism</a>. June 10th, 2020 @ Schwankhalle Bremen<br>.
+            <br>
+            This was a very improvised setup with only 7 days of preparation time, but it's meant to become something even more convoluted. Let's here more later this year...
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+      <!-- Fake Experience im Theater Bremen-->
+  <div class="row audio live">
+    <div class="col-sm-12" id="features">
+      <p></p>
+      <div class="row">
+        <div class="col-sm-4 features-content">
+          <iframe width="100%" height="100% src="https://www.youtube.com/embed/30jCJgvizY0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-8 features-content text">
+          <p>&emsp; Fake Experience performing "Diploma" Live @ Theater Bremen February 28th, 2020.<br>
+          <p style="text-align:right">Februar 2020</p>
+        </div>
+      </div>
+    </div>
   </div>
-  </p>
+  <hr class="audioLine">
+
+  <!--Fake Experience @ Radio Angrezi-->
+  <div class="row audio live">
+    <div class="col-sm-12" id="features">
+      <p></p>
+      <div class="row">
+        <div class="col-sm-4 features-content"><iframe src="https://audiomack.com/embed/song/robodaff/live-radio-angrezi-flutung?background=1" scrolling="no" width="100%" height="100%" scrollbars="no" frameborder="0"></iframe>
+        </div>
+        <div class="col-sm-8 features-content text">
+          <p>&emsp; Fake Experience Live @ Radio Angrezi Flutung October 11th, 2019. (<a href="files/fake_experience_-_live_at_radio_angrezi_flutung_2019.mp3">>>Download<<< /a>) <br>
+                <p style="text-align:right">Oktober 2019</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-sm-12" id="features">
+        <p><b>2019-02-28:</b> Konzert mit <a href="https://www.instagram.com/fake_experience/">Fake
+            Experience</a>
+          im <a href=https://www.theaterbremen.de/de_DE/kalender/fake-experience.16372096>Theater
+            Bremen</a>
+          <br>
+          <b>2019-02-21:</b> Konzert mit <a href="https://www.instagram.com/fake_experience/">Fake
+            Experience</a> in
+          der <a href=https://www.schwulesauhannover.de />Schwulen Sau Hannover</a> <br>
+      </div>
+    </div>
+
+    <hr>
+
+  </div>
 </body>
 
 </html>
