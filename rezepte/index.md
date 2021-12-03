@@ -1,5 +1,14 @@
 # Rezepte
 
+## Erdnusseintopf
+- Ingwer, Zwiebeln, Knoblauch, Chili anbraten
+- (eventuell Kartoffeln dazu)
+- Möhren dazu, etwas kochen lassen
+- große weiße Bohnen und Erbsen dazu
+- Tomatensoße rein, evtl gehackte Tomaten dazu
+- mehr Chili und Knoblauch rein
+- richtig viel Erdnuss(butter) rein, 100% Erdnüsse!
+
 ## Krautsalat mit Kartoffeln, roten Beten & Bohnen
 - Kartoffeln vorkochen bis sie ziemlich weich sind
 - rote Bete ebenfalls kochen oder vorgekochte benutzen
