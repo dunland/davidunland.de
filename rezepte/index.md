@@ -15,7 +15,6 @@
 - alles würfeln
 - Krautsalat aus'm Eimer/Glas dazu tun
 - Kidneybohnen dazu tun
-
 - Essig drüber? Wie würzen?
 
 ## Sellerieschnitzel
