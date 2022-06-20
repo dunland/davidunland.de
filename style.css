@@ -143,16 +143,18 @@ div.col-sm-4 {
 /* image columns */
 div.col-sm-4 img {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
-  width: 100%;
-  max-width: 300px;
+  /* width: 100%; */
+  max-width: 100%;
+  /* object-fit: contain; */
   /* width: 30vw; */
   /* min-width: 200px; */
-  max-height: 300px;
+  max-height: 400px;
   /* height: 30vw; */
   /* min-height: 200px; */
   /* height:100%; */
   /* position: absolute; */
   /*z-index: -1;*/
+  margin: auto;  
 }
 
 div.col-sm-4 img:hover {
