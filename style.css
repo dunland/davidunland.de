@@ -52,9 +52,6 @@ a{
   text-decoration-line: underline;
   text-decoration-style: dotted;
 }
-a:hover{
-  background-color:rgb(254, 231, 112);
-}
 
 iframe{
   left:0%;
@@ -156,12 +153,13 @@ div.col-sm-4 img {
   /* height:100%; */
   /* position: absolute; */
   /*z-index: -1;*/
-  margin: auto;  
+  margin: auto;
 }
 
 div.col-sm-4 img:hover {
   opacity: 0.4;
   filter: alpha(opacity=40);
+  background-color: transparent;
 }
 
 div.imageTitle { /* for use of titles spanning over images*/
@@ -198,6 +196,11 @@ div.text {
   text-align: block;
   vertical-align: middle;
   margin-top: 20px;
+}
+
+/* change background color of text-links */
+div.text a:hover{
+  background-color:rgb(254, 231, 112);
 }
 
 div.intro{ /* für Seitenbeschreibung über Content*/
