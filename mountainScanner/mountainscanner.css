@@ -1,0 +1,21 @@
+/* For website subheaders */
+h2 {
+    display: inline;
+    font-style: justify;
+    color: rgba(139, 185, 185, 0.81);
+    letter-spacing: 2vw;
+    font-size: 5vw !important;
+}
+
+div.text {
+    border-color: blue;
+    text-align: justify;
+    vertical-align: middle;
+    margin-top: 20px;
+    padding-left: 10vw;
+    padding-right: 10vw
+}
+
+div.smalltext {
+    font-size: smaller;
+}

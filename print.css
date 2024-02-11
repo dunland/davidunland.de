@@ -1,0 +1,114 @@
+@media print {
+
+    html,
+    body {
+      margin: 0px;
+      padding: 0px;
+      font-family: Lora, georgia, serif;
+      font-size: 16px;
+      /* color: rgb(0, 0, 0); */
+      background-attachment: fixed;
+      /* color:white; */
+  
+    }
+
+    .no-print{
+        display: none;
+    }
+
+    a:after {
+        display: none; /* ausgeschriebenen Link verbergen */
+    }
+
+    p {
+        /* page-break-inside: avoid; */
+        color: rgba(139, 185, 185, 0.81);
+    }
+
+    iframe {
+        left: 0%;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(222, 222, 222);
+        border: none;
+    }
+
+    /* For website headers */
+    h1 {
+        display: inline;
+        font-style: justify;
+        color: rgb(76, 185, 185);
+        font-size: 5vw;
+        letter-spacing: 3vw;
+    }
+
+    /* For website subheaders */
+    h2 {
+        display: inline;
+        font-style: justify;
+        color: #a1c6c6 !important;
+        letter-spacing: 2vw;
+        font-size: 3vw;
+    }
+
+    /* For website subheaders */
+    h3 {
+        display: inline;
+        font-style: justify;
+        color: #c1e1e2 !important;
+        letter-spacing: 0.8vw;
+        font-size: 2vw;
+    }
+
+    div.text {
+        border-color: blue;
+        text-align: block;
+        vertical-align: middle;
+        margin-top: 20px;
+    }
+
+    /* change background color of text-links */
+    div.text a:hover {
+        background-color: rgb(254, 231, 112);
+    }
+
+    div.intro {
+        /* für Seitenbeschreibung über Content*/
+        vertical-align: middle;
+        /* color:rgb(255, 255, 255); */
+        /* border-style: solid; */
+        border-width: 1px;
+        border-radius: 2px;
+        border-color: rgb(175, 201, 209);
+        margin-top: 20px;
+    }
+
+    p.introtext {
+        /* text iside intro div */
+        color: rgb(76, 159, 185);
+        text-align: justify;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .imageTitle span {
+        background-color: white;
+    }
+
+    #innerbottom {
+        display: table;
+        margin: 0 auto;
+    }
+
+    #outerbottom {
+        /* position:fixed; */
+        position: static;
+        bottom: 30%;
+        width: 100%;
+    }
+    iframe {
+        display: none;
+    }
+}

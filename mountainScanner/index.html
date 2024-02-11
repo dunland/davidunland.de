@@ -17,7 +17,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <!-- <link rel="stylesheet" href="../style.css" type="text/css"> -->
+    <link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./mountainscanner.css" type="text/css">
+    <link rel="stylesheet" href="../print.css" media="print">
     <title>mountainScanner - davidunland.de</title>
 
     <script>
@@ -31,30 +34,32 @@
     <!-- <div class="head" id="header" style="top:30%"> -->
     <div class="container-fuild">
         <div class="row">
-            <div><img src="images/mountainScanner-head.png" style="width:100%"></div>
+            <div><img src="images/mountainScanner-head.png" style="width:100%; margin-bottom: 2vh;"></div>
         </div>
-        <div class="row" style="padding-left:50; padding-right:50">This is a series of scanned mountain ridges around
+        <p></p>
+        <div class="row text no-print">This is a series of scanned mountain ridges around
             Stöðvarfjörður (a fjord in the East of Iceland).<br>
             The mountains consist of more than eleven million year old basaltic rocks. Their lava layers, always tilted
             towards the center of the island, were once connected, forming large plains of overlying lava fields. The
             glaciers in the Late Pleistocene carved huge gouges into the rock masses, leaving behind sharp ridges, that
-            demarcate from the sky with disctinct contours (on a clear day).<br>
-            What appears to be stirdy, immobile constructs of nature becomes vivd and fluent, once you start changing
+            stand out against the sky with disctinct contours (on a clear day).<br>
+            What appears to be stirdy, immobile constructs of nature becomes vivid and fluent, once you start changing
             your perspective. Moving only a dozen of meters, the compositions of all the lines describing the mountains'
             characters will shift ‒ the outline of the ridges in front of the clear skies, the tilted lava layers
-            inclined towards north-west, the trails that falling gravel leaves behind or the gashes that are carved into
+            inclined towards north-west, the trails, falling gravel leaves behind, or the gashes, that are carved into
             the slopes by the rivers ‒ they all are moving, as you change your perspective.
             <p>
-                <center>Click on the images to make them shout.</center>
+                <center>Click on the images to listen.</center>
             </p>
         </div>
-        <div class="row">
+        <div class="row" style="padding-left:50; padding-right:50">
             <!-- <div class="col-sm-6"></div> -->
             <div style="top:20px">
                 <center>
                     <h2> Sauðabólstindur </h2>
-                    <p><a href="https://map.is/base/@742722,493937,z9,0">64.85717252104585, -13.87645925059994</a></p>
-                    <p>
+                    <p>[<a href="https://map.is/base/@742722,493937,z9,0">64.85717252104585, -13.87645925059994</a>]</p>
+                    <p style="height: 2vh;"></p>
+                    <p style="margin-left:10px">
                         <img src="images/0.png" style="cursor:pointer"
                             onclick="playAudio('sounds/saudhaholstindur_pitch_scan_0.wav')">
                         <img src="images/1.png" style="cursor:pointer"
@@ -269,37 +274,56 @@
             </div> -->
             </div>
         </div>
-        <center>
+        <div class="row text smalltext">
+            <!-- <center> -->
             <p>
                 <br>
-            <h3>How was this made?</h3>
-            <br>A photo was taken of Sauðahólstindur mountain peak every ~20 meters distance. The images where aligned
-            and centered with the mountain tip, so that the shift in perspective can be observed (sonically).
-            <br>The audio files represent "mountain scans" that are made from 1920-pixel-wide source images. The images
-            are translated to pitch and played back at 1 pixel per millisecond (resulting in 1.92 seconds-long sound
-            files). At the same time, they are being repeatedly played at 44100 samples per second, each sound lasts
+            <h3 class="no-print">How was this made?</h3>
+            <div class="print-only">This is a series of scanned mountain ridges around
+                Stöðvarfjörður (a fjord in the East of Iceland).<br>
+                The mountains consist of more than eleven million year old basaltic rocks. Their lava layers, always
+                tilted
+                towards the center of the island, were once connected, forming large plains of overlying lava fields.
+                The
+                glaciers in the Late Pleistocene carved huge gouges into the rock masses, leaving behind sharp ridges,
+                that
+                stand out against the sky with disctinct contours (on a clear day).<br>
+                What appears to be stirdy, immobile constructs of nature becomes vivid and fluent, once you start
+                changing
+                your perspective. Moving only a dozen of meters, the compositions of all the lines describing the
+                mountains'
+                characters will shift ‒ the outline of the ridges in front of the clear skies, the tilted lava layers
+                inclined towards north-west, the trails, falling gravel leaves behind, or the gashes, that are carved
+                into
+                the slopes by the rivers ‒ they all are moving, as you change your perspective.
+            </div>
+            <br>A photo was taken of Sauðahólstindur mountain peak every ~20 meters distance. The images where
+            aligned
+            and centered with the mountain tip, so that the shift in perspective can be observed (sonically<span class="print-only"> - they can be listened to at davidunland.de/mountainScanner</span>).
+            <br>The audio files represent "mountain scans" that are made from 1920-pixel-wide source images. During the first iteration of the project, the images are translated to pitch and played back at 1 pixel per millisecond (resulting in 1.92 seconds-long sound files). At the same time, they are being repeatedly played at 44100 samples per second, each sound lasts
             only about 43 ms.
             </p>
-            <br>
-            <p>
+            <p style="text-align: right;">David Unland - 2021</p>
+        </div>
+        <hr class="no-print">
+        <div class="row">
+            <center>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/IPe39Ud9i0I"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-            </p>
-            <p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/OTNxnvP7FG8"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-            </p>
-            <p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/B9TKNiWhx-M"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-            </p>
-        </center>
+            </center>
+        </div>
+        <!-- </center> -->
+    </div>
 </body>
 
 </html>
