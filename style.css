@@ -159,7 +159,7 @@
     margin: auto;
   }
 
-  div.col-sm-4 img:hover {
+  div.col-sm-4 a img:hover {
     opacity: 0.4;
     filter: alpha(opacity=40);
     background-color: transparent;
