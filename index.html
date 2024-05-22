@@ -17,88 +17,92 @@
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="grid.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="grid.css">
 
   <title>D U N L A N D / News</title>
 </head>
 
 <body>
-  <div class="head" id="header">
-    <center>
-      <a href="http://davidunland.de">
-        <h1>D U N L A N D</h1>
-      </a>
-      <br>
-      <div>
-        <a href="musik.html" target="content" class="menu">Musik</a> &#8212;
-        <a href="installations.html" target="content" class="menu">Experimente</a> &#8212;
-        <a href="video.html" target="content" class="menu">Video</a> &#8212;
-        <a href="radio.html" target="content" class="menu">Radio</a>
 
-      </div>
-    </center>
+  <div class="head" id="header">
+
+    <header id="websiteHeader">
+      <center>
+        <a href="http://davidunland.de">
+          <h1>D U N L A N D</h1>
+        </a>
+        <nav id="category-buttons">
+          <button data-category="audio">Audio</button>
+          <button data-category="video">Video</button>
+          <button data-category="live">live</button>
+          <button data-category="installation">Installation</button>
+        </nav>
+      </center>
+    </header>
   </div>
 
   <div class="container">
 
-        <!-- Q-Scope -->
-        <div class="col-sm-12" id="features">
-          <p></p>
-          <div class="row installation">
-            <div class="col-sm-4 features-content">
-              <a href="http://q-scope.readthedocs.io/"><img src="images/Q-Scope_setup.jpg"></a>
-            </div>
-            <div class="col-sm-8 features-content text">
-              <div class="textTitle"><span>Q-Scope</span></div>
-              <br><b>2023-12:</b> Am Fachgebiet Resiliente Energiesysteme der Universität Bremen habe ich als Wissenschaftlicher Mitarbeiter <a href="https://www.uni-bremen.de/res/methoden/decision-support-tools#c534829-q-scope">diese Plattform</a> entwickelt, die in meiner Forschung über Partizipationsprozesse bei der Energiewende als interaktives Unterstützungswerkzeug zum Einsatz kam. 
-              <br>Die Software für das <a href="https://github.com/quarree100/qScope_frontend/">Frontend</a>, das <a href="https://github.com/quarree100/cspy">Backend</a> (Token Detection via Computer Vision) und für den <a href="https://github.com/quarree100/qScope_infoscreen
+    <!-- Q-Scope -->
+    <div class="tile installation">
+      <p></p>
+      <div>
+        <a href="http://q-scope.readthedocs.io/"><img src="images/Q-Scope_setup.jpg"></a>
+      </div>
+      <div class="features-content text">
+        <div class="textTitle"><span>Q-Scope</span></div>
+        <br><b>2023-12:</b> Am Fachgebiet Resiliente Energiesysteme der Universität Bremen habe ich als
+        Wissenschaftlicher Mitarbeiter <a
+          href="https://www.uni-bremen.de/res/methoden/decision-support-tools#c534829-q-scope">diese Plattform</a>
+        entwickelt, die in meiner Forschung über Partizipationsprozesse bei der Energiewende als interaktives
+        Unterstützungswerkzeug zum Einsatz kam.
+        <br>Die Software für das <a href="https://github.com/quarree100/qScope_frontend/">Frontend</a>, das <a
+          href="https://github.com/quarree100/cspy">Backend</a> (Token Detection via Computer Vision) und für den <a
+          href="https://github.com/quarree100/qScope_infoscreen
               ">Infoscreen</a> stehen bei GitHub zur freien Verfügung.
-            </div>
-          </div>
-          <hr>
-        </div>
-  
-      <hr class="installLine">
+      </div>
+      <hr>
+    </div>
+
+    <hr class="installLine">
 
     <!-- Rhizophora Proberaumaufnahmen / Fusionbewerbung -->
-      <div class="col-sm-12" id="features">
-        <p></p>
-        <div class="row audio">
-          <div class="col-sm-4 features-content">
-            <iframe width="100%" height="250" src="https://www.youtube.com/embed/5tlfY4BDvgE"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-          <div class="col-sm-8 features-content text">
-            <div class="textTitle"><span>Rhizophora</span></div>
-            <br><b>2021-03-29:</b> Rhizophora playing "Theodolit", "Sattelstein" and "Kupfer und Gold" with live visuals
-            in their rehearsal room in
-            Bremen.
-            <p style="text-align: center;">Music by J.Kloster & D.Unland
-            | Camera by A. Zeller
-            | Artwork by T. Unland and D. Unland
-            </p>
-          </div>
-        </div>
-        <hr>
+    <div class="tile audio">
+      <div class="features-content">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/5tlfY4BDvgE" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
+      <div class="features-content text">
+        <div class="textTitle"><span>Rhizophora</span></div>
+        <br><b>2021-03-29:</b> Rhizophora playing "Theodolit", "Sattelstein" and "Kupfer und Gold" with live visuals
+        in their rehearsal room in
+        Bremen.
+        <p style="text-align: center;">Music by J.Kloster & D.Unland
+          | Camera by A. Zeller
+          | Artwork by T. Unland and D. Unland
+        </p>
+      </div>
+    </div>
+    <hr>
 
     <hr class="audioline">
 
     <!-- Fish Factory interview -->
-    <div class="row installation">
-      <div class="col-sm-12" id="features">
+    <div class="tile installation">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content">
+        <div class="features-content">
           <iframe width="100%" height="250" src="https://www.youtube.com/embed/B9TKNiWhx-M" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <div class="textTitle"><span>Creative Center in Iceland</span></div>
           <p><b>2021-11-15:</b> In the month of October, 2021, I stayed at the <a
               href="http://inhere.is/2021/11/david-unland/">Fish Factory Creative Center</a> in Stöðvarfjörður, Iceland.
@@ -113,18 +117,18 @@
 
 
     <!-- Animal Dreams: Highlights over Stöðvarfjörður -->
-    <div class="row audio">
-      <div class="col-sm-12" id="features">
+    <div class="tile audio">
+      <div class="tile">
         <p></p>
-        <!-- <div class="row audio"> -->
-        <div class="col-sm-4 features-content">
+        <!-- <div class="tile audio"> -->
+        <div class="features-content">
           <center>
             <a href="https://animal-dreams.bandcamp.com/album/high-lights-over-st-varfj-r-ur"><img
                 src="images/animal-dreams_highlights.jpg" width="100%"
                 title="High:lights over Stöðvarfjörður by Animal Dreams"></a>
           </center>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <div class="textTitle"><span>Animal Dreams</span></div>
           <p><b>2021-11-11:</b>Just released <i>Animal Dreams - High:lights over Stöðvarfjörður</i> on <a
               href="">bandcamp</a>!
@@ -143,17 +147,17 @@
     <hr class="audioLine">
 
     <!-- MOUNTAIN SCANNER-->
-    <div class="row installation">
-      <div class="col-sm-12" id="features">
+    <div class="tile installation">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content">
+        <div class="features-content">
           <center>
             <a href="http://davidunland.de/mountainScanner"><img
                 src="mountainScanner/images/mountainScanner-animatedHead.gif" width="100%"></a>
           </center>
         </div>
 
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <div class="textTitle"><span>mountain scanner</span></div>
           <p><b>2021-10-30:</b> find the documentation of my <a href="mountainScanner/">mountain scanner</a> project
             on the website ‒ a project I was lucky to create during my stay at the <a href="inhere.is"
@@ -166,14 +170,14 @@
     <hr class="installLine">
 
     <!-- fliegende Wüstenzitrone im Proberaum -->
-    <div class="row">
-      <div class="col-sm-12" id="features">
+    <div class="tile">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content">
+        <div class="features-content">
           <iframe width="100%" height="250" src="https://www.youtube.com/embed/lIa-xBCqfAs" frameborder="0"
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <div class="textTitle"><span>Rhizophora</span></div>
           <br><b>2021-04-04:</b> Rhizophora playing "fliegende Wüstenzitrone" with drum-reactive Visuals processed
           by the
@@ -185,10 +189,10 @@
     <hr>
 
     <!-- SUPER MUSCLE -->
-    <div class="row">
-      <div class="col-sm-12" id="features">
+    <div class="tile audio installation">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content">
+        <div class="features-content">
           <div style="padding:56.25% 0 0 0;position:relative;"><iframe
               src="https://player.vimeo.com/video/489299324?h=03c34af466&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
@@ -196,14 +200,13 @@
               title="SUPER MUSCLE Improvisation #1"></iframe></div>
           <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <div class="textTitle"><span>SUPER MUSCLE</span></div>
           <br><b>2020-12-11:</b> <i>SUPER MUSCLE: Summoning Percussive Music Using Live Electronics</i> is the title
           of my
           Master Thesis Project of the study program Digital Media @ HfK Bremen.
           <br>Find the project website <a href="muscle">here </a>.
-              <br>The source code is available on <a href="https://github.com/dunland/muscle"
-                target="_blank">GitHub</a>.
+          <br>The source code is available on <a href="https://github.com/dunland/muscle" target="_blank">GitHub</a>.
 
         </div>
       </div>
@@ -212,17 +215,17 @@
     <hr>
 
     <!-- Debris -->
-    <div class="row">
-      <div class="col-sm-12" id="features">
+    <div class="tile installation">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content">
+        <div class="features-content">
           <div style="padding:56.25% 0 0 0;position:relative;"><iframe
               src="https://player.vimeo.com/video/458770953?h=bb4451f618&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
               style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Debris (2020)"></iframe></div>
           <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <div class="textTitle"><span><i>Debris</i></span></div>
 
           <br><b>2020-11-24:</b> Finally uploaded a documentation of <a href="http://davidunland.de/debris"
@@ -234,14 +237,14 @@
     <hr>
 
     <!-- SUPERMUSCLE tests #1 -->
-    <div class="row">
-      <div class="col-sm-12" id="features">
+    <div class="tile audio video installation">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content">
+        <div class="features-content">
           <iframe width="100%" height="250" src="https://www.youtube.com/embed/LWqzEd7tHn0" frameborder="0"
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <br><b>2020-10-30:</b> trying to control the delayTime of a microKORG with my snare drum..
         </div>
       </div>
@@ -250,14 +253,14 @@
     <hr>
 
     <!-- SUPERMUSCLE tests #2 -->
-    <div class="row">
-      <div class="col-sm-12" id="features">
+    <div class="tile audio video installation">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content">
+        <div class="features-content">
           <iframe width="100%" height="250" src="https://www.youtube.com/embed/JWPHVcNEvGU" frameborder="0"
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <br><b>2020-09-08:</b> Testing MIDI CC changes triggered with drums on prepped drumset
           <br> some more outcomes can be listened to <a
             href="https://audiomack.com/robodaff/song/swell-demo-01-2020-09-08">here</a> and <a
@@ -270,14 +273,14 @@
     <hr>
 
     <!-- Doule Squirrel @ Schwankhalle Bremen -->
-    <div class="row audio live">
-      <div class="col-sm-12" id="features">
+    <div class="tile audio">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content">
+        <div class="features-content">
           <iframe width="100%" height="250" src="https://www.youtube.com/embed/qLZscIu9xiA" frameborder="0"
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <div class="textTitle"><span>DOUBLE SQUIRREL</span></div>
           <br><b>2020-06-10:</b> Live-Gedängel auf einem präpariertem Schlagzeug als <i>Double Squirrel</i>
           bei
@@ -299,14 +302,14 @@
     <hr class="audioLine">
 
     <!-- Fake Experience im Theater Bremen-->
-    <div class="row audio live">
-      <div class="col-sm-12" id="features">
+    <div class="tile audio live">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content">
+        <div class="features-content">
           <iframe width="100%" height="250" src="https://www.youtube.com/embed/30jCJgvizY0" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <div class="textTitle"><span>Fake Experience</span></div>
           <p>&emsp; Fake Experience performing "Diploma" Live @ Theater Bremen February 28th, 2020.<br>
           <p style="text-align:right">Februar 2020</p>
@@ -317,14 +320,14 @@
     <hr class="audioLine">
 
     <!--Fake Experience @ Radio Angrezi-->
-    <div class="row audio live">
-      <div class="col-sm-12" id="features">
+    <div class="tile audio live">
+      <div class="tile">
         <p></p>
-        <div class="col-sm-4 features-content"><iframe
+        <div class="features-content"><iframe
             src="https://audiomack.com/embed/song/robodaff/live-radio-angrezi-flutung?background=1" scrolling="no"
             width="100%" height="100%" scrollbars="no" frameborder="0"></iframe>
         </div>
-        <div class="col-sm-8 features-content text">
+        <div class="features-content text">
           <p>&emsp; Fake Experience Live @ Radio Angrezi Flutung October 11th, 2019. (<a
               href="files/fake_experience_-_live_at_radio_angrezi_flutung_2019.mp3">>>Download<<< </a>) <br>
                 <p style="text-align:right">Oktober 2019</p>
@@ -332,8 +335,8 @@
       </div>
     </div>
 
-    <div class="row audio">
-      <div class="col-sm-12" id="features">
+    <div class="tile audio">
+      <div class="tile">
         <p><b>2019-02-28:</b> Konzert mit <a href="https://www.instagram.com/fake_experience/">Fake
             Experience</a>
           im <a href=https://www.theaterbremen.de/de_DE/kalender/fake-experience.16372096>Theater
