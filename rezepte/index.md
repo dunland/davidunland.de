@@ -9,6 +9,19 @@
 - mehr Chili und Knoblauch rein
 - richtig viel Erdnuss(butter) rein, 100% Erdnüsse!
 
+-----------------------------------------------------------------
+
+## Foul
+
+**Dip**: Knoblauch + Zitrone in Mörser stampfen + Olivenöl (+Tahin) + (Soja-)Joghurt
++ ~ 1 Dose Fava-Bohnen pro Person (oder weiße Riesenbohnen)
++ ~ 2-3 Tomaten pro Dose Bohnen
++ viel Petersilie!
+
+Kumin+Salz an die Bohnen, mit Salz abschmecken. Fladenbrot dazu servieren. Ist echt einfach.
+
+-----------------------------------------------------------------
+
 ## Kimchi
 
 von [hier](https://www.fairment.de/rezepte-artikel/kimchi-rezept/):
@@ -43,6 +56,8 @@ von [hier](https://www.fairment.de/rezepte-artikel/kimchi-rezept/):
 11. Nach ca. 2-3 Wochen Fermentationszeit kannst du mal kosten. Schmeckt es dir, ist dein Ferment fertig!
 12. Im Kühlschrank aufbewahrt hält sich das Kimchi einige Monate.
 
+-----------------------------------------------------------------
+
 ## Krautsalat mit Kartoffeln, roten Beten & Bohnen
 - Kartoffeln vorkochen bis sie ziemlich weich sind
 - rote Bete ebenfalls kochen oder vorgekochte benutzen
@@ -50,6 +65,20 @@ von [hier](https://www.fairment.de/rezepte-artikel/kimchi-rezept/):
 - Krautsalat aus'm Eimer/Glas dazu tun
 - Kidneybohnen dazu tun
 - Essig drüber? Wie würzen?
+
+-----------------------------------------------------------------
+
+## Pflaumen-Chutney
+
+- 500g Pflaumen waschen, entsteinen, vierteln
+- 50g Ingwer und 400g Zwiebeln mit 2EL Öl glasig andünsten
+- die Pflaumen und 250g braunen Zucker dazu geben
+- Zucker unter Rühren schmelzen lassen
+- Würzen mit Salz, Cayennepfeffer
+- ca. 35min mit 300mL Balsamico einkochen!
+- fertiges Chutney in sterilisiertes Glas einfüllen
+
+-----------------------------------------------------------------
 
 ## Sellerieschnitzel
 - Sellerieknolle in 1-1,5 cm dicke Scheiben schneiden
